@@ -29,9 +29,8 @@ endif()
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CMake)
 
-if(NOT TARGET OptiX::OptiX)
-  find_package( OptiX REQUIRED )
-endif()
+include(FetchOptiX)
+
 if(NOT TARGET CUDA::cuda_driver)
   find_package( CUDAToolkit 10.0 REQUIRED )
 endif()

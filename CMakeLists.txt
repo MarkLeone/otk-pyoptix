@@ -54,7 +54,7 @@ else()
 endif()
 
 add_custom_target(PyOptiX ALL 
-    ${CMAKE_COMMAND} -E env PYOPTIX_CMAKE_ARGS="-DOptiX_INSTALL_DIR=${OptiX_INSTALL_DIR}" 
+    ${CMAKE_COMMAND} -E env PYOPTIX_CMAKE_ARGS="" 
     ${Python_EXECUTABLE} setup.py build 
     WORKING_DIRECTORY optix
     DEPENDS env.timestamp)
